@@ -1,0 +1,555 @@
+/* ===============================
+   🌙 Dark Theme Portfolio Styles
+   Optimized for Performance & SEO
+   =============================== */
+
+/* Reset & Base Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #ff6ec4, #7873f5);
+  --secondary-gradient: linear-gradient(135deg, #00c9ff, #92fe9d);
+  --accent-color: #00ffff;
+  --dark-bg: #0e0e10;
+  --light-text: #e5e5e5;
+}
+
+/* Body */
+body {
+  background: var(--dark-bg);
+  color: var(--light-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Glow Background */
+.glow-background {
+  position: fixed;
+  top: -30%;
+  left: -30%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #00ffff33, transparent 70%);
+  z-index: -1;
+  animation: glow 10s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% { transform: scale(1) translate(-10%, -10%); }
+  100% { transform: scale(1.1) translate(10%, 10%); }
+}
+
+/* Navbar */
+header {
+  background-color: #1a1a1d;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Default: Prevent wrapping for larger screens */
+  padding: 0 10px;
+  min-width: 320px; /* Ensure navbar has a minimum width */
+  position: relative; /* Needed for absolute positioning of nav-links */
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  white-space: nowrap; /* prevent logo wrap */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  margin-right: 20px; /* Space between logo and nav-links on larger screens */
+}
+
+.nav-links {
+  display: flex; /* Default: flex for larger screens */
+  list-style: none;
+  gap: 25px; /* spacing between nav links */
+  flex-wrap: nowrap; /* keep all links in one row for larger screens */
+  justify-content: flex-end;
+  align-items: center;
+  white-space: nowrap; /* prevent link text from wrapping */
+  flex-grow: 1; /* Allow nav-links to grow */
+}
+
+.nav-links li {
+  flex-shrink: 0; /* Prevent list items from shrinking */
+}
+
+/* Hamburger menu button - hidden by default on large screens */
+.hamburger {
+  display: none; /* Hide on larger screens */
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above other elements if needed */
+  padding: 5px; /* Add some padding for easier tapping */
+}
+
+/* Icon toggling for hamburger */
+.hamburger .fa-times {
+  display: none; /* Hide close icon by default */
+}
+
+.hamburger.open .fa-bars {
+  display: none; /* Hide bars icon when menu is open */
+}
+
+.hamburger.open .fa-times {
+  display: inline-block; /* Show close icon when menu is open */
+}
+
+
+/* Responsive Adjustments for Smaller Screens (Hamburger Menu Logic) */
+/* This breakpoint covers most phones (768px width and below) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Logo and Hamburger side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding for tablets/phones */
+    flex-wrap: nowrap; /* Keep logo and hamburger on one line */
+  }
+
+  .logo {
+    margin-right: 0; /* Remove extra margin on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Crucial: Hidden by default on small screens */
+    flex-direction: column; /* Stack links vertically when open */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    right: 0;
+    width: 100%; /* Full width dropdown */
+    background-color: #1a1a1d; /* Same as header background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 20px;
+    gap: 15px; /* Spacing between stacked links */
+    align-items: flex-start; /* Align links to the left */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, max-height 0.3s ease-out;
+    transform: translateY(-10px); /* Start slightly up for animation */
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when hidden */
+    max-height: 0; /* Start with no height for animation */
+    overflow: hidden; /* Hide content that overflows during animation */
+  }
+
+  .nav-links.open {
+    display: flex; /* Change to flex when open */
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when open */
+    max-height: 300px; /* Max height to allow content to show, adjust as needed if you have many links */
+    overflow-y: auto; /* Allow scrolling if too many links */
+  }
+
+  .nav-links li {
+    width: 100%; /* Make list items take full width */
+    text-align: left;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem; /* Larger font size for better readability in dropdown */
+    padding: 10px 0; /* Add padding for better click area */
+    display: block; /* Make links block level to take full width */
+  }
+
+  /* Show hamburger button on smaller screens */
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #7c3aed;
+  box-shadow: 0 8px 15px rgba(124, 58, 237, 0.4);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: var(--accent-color);
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+/* Button */
+.btn {
+  background: var(--accent-color);
+  color: var(--dark-bg);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00cccc;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 15px;
+}
+
+.skill-bubble {
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: var(--primary-gradient);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.skill-bubble:hover {
+  transform: scale(1.05);
+}
+
+.soft-skills .skill-bubble {
+  background: var(--secondary-gradient);
+  color: #1a1a2e;
+}
+
+.skill-category h4 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Projects & Certifications */
+.project-gallery,
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  color: #fff;
+  border: 1px solid #00ffff33;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3,
+.cert-card h4 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Contact */
+#contact p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  background-color: #1a1a1d;
+  color: #777;
+}
+
+/* Typing Cursor */
+.typed-text::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Responsive */
+
+/* Large desktops */
+@media (max-width: 1200px) {
+  .navbar {
+    width: 95%;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+  .glass-card {
+    width: 260px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  /* No significant changes needed here as 768px handles hamburger */
+}
+
+/* Extra small devices (portrait phones, including 720x1600, 1080x2400, 1440x3200) */
+/* The 768px breakpoint already covers these. No need for additional breakpoints unless specific
+   layout differences are desired for higher-res phones, which is rare for basic hamburger. */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Logo and hamburger side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding for phone screens */
+    flex-wrap: nowrap; /* Keep logo and hamburger on one line */
+  }
+
+  .logo {
+    margin-right: 0; /* Remove extra margin on smaller screens */
+  }
+
+  .nav-links {
+    /* Crucial: Hide nav-links by default on small screens */
+    /* Override global display: flex */
+    display: none;
+    flex-direction: column; /* Stack links vertically when open */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    right: 0;
+    width: 100%; /* Full width dropdown */
+    background-color: #1a1a1d; /* Same as header background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 20px;
+    gap: 15px; /* Spacing between stacked links */
+    align-items: flex-start; /* Align links to the left */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, max-height 0.3s ease-out; /* Added max-height to transition */
+    transform: translateY(-10px); /* Start slightly up for animation */
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when hidden */
+    max-height: 0; /* Start with no height for animation */
+    overflow: hidden; /* Hide content that overflows during animation */
+  }
+
+  .nav-links.open {
+    /* Show nav-links when 'open' class is added by JS */
+    display: flex; /* Change to flex when open */
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when open */
+    max-height: 300px; /* Max height to allow content to show, adjust as needed if you have many links */
+    overflow-y: auto; /* Allow scrolling if too many links */
+  }
+
+  .nav-links li {
+    width: 100%; /* Make list items take full width */
+    text-align: left;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem; /* Larger font size for better readability in dropdown */
+    padding: 10px 0; /* Add padding for better click area */
+    display: block; /* Make links block level to take full width */
+  }
+
+  /* Show hamburger button on smaller screens */
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Minor adjustments for very small screens (e.g., iPhone 5/SE width) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 10px; /* Adjust padding for very small screens */
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .nav-links a {
+    font-size: 1rem; /* Slightly smaller for very small screens */
+    padding: 8px 0;
+  }
+  .hero {
+    padding: 40px 10px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 1rem;
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .section {
+    padding: 40px 10px;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  .skill-bubble {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+  }
+  .glass-card {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Ultra small devices (very narrow screens, e.g., <360px) */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 10px 8px; /* Even smaller padding */
+  }
+  .logo {
+    font-size: 1.1rem; /* Slightly smaller logo */
+  }
+  .nav-links a {
+    font-size: 0.9rem; /* Smallest possible font size */
+    padding: 6px 0;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .hero h2 {
+    font-size: 0.9rem;
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  .skill-bubble {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+  .section {
+    padding: 30px 8px;
+  }
+  .section h2 {
+    font-size: 1.3rem;
+  }
+}

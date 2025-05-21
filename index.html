@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hasshya Krishnamoorthy | Portfolio</title>
+  <link rel="icon" href="assets/profile.jpeg" type="image/jpeg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="glow-background"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hasshya</div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i> </button>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="assets/profile.jpeg" alt="Photo of Hasshya Krishnamoorthy" class="profile-photo" />
+    <h1>Hi, I'm <span class="name">Hasshya Krishnamoorthy</span></h1>
+    <h2>I’m a <span class="typed-text"></span></h2>
+    <p>Final year BE CSE (specialization AIML) student</p>
+    <a href="Resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Techie by day, organizer by passion, and a full-time “ziddi learner” on a mission! I’m a tech-savvy storyteller who blends logic with drama — think Silicon Valley meets Bollywood.
+      <br><br>
+      From coding like a pro to hosting electrifying fests with filmy flair, I do it all with the energy of a Bollywood climax scene. Whether it’s chasing dream internships, diving into deep learning, or curating campus showstoppers, I’m always ready for action!
+      <br><br>
+      🎤 Dialogues? I write them for events.<br>
+      🎬 Action? I bring it to every project.<br>
+      🎓 Mission? Learning, leading & leveling up.
+      <br><br>
+      Life's my set — and I'm rolling every scene with innovation, emotion, and a little bit of filmy tadka.
+    </p>
+  </section>
+
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-subsection" data-aos="fade-right">
+      <h3>Technical Skills</h3>
+      <div class="skill-category">
+        <h4>Programming Languages</h4>
+        <div class="skills-grid">
+          <div class="skill-bubble"><i class="fas fa-code"></i> Python</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> Java</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> JavaScript</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> C++</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> HTML</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> CSS</div>
+          <div class="skill-bubble"><i class="fas fa-code"></i> SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Frameworks & Libraries</h4>
+        <div class="skills-grid">
+          <div class="skill-bubble"><i class="fas fa-robot"></i> Machine Learning</div>
+          <div class="skill-bubble"><i class="fas fa-robot"></i> Deep Learning</div>
+          <div class="skill-bubble"><i class="fas fa-robot"></i> NLP</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> TensorFlow</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> Keras</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> Scikit-learn</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> NLTK</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> Pandas</div>
+          <div class="skill-bubble"><i class="fas fa-cubes"></i> NumPy</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Databases</h4>
+        <div class="skills-grid">
+          <div class="skill-bubble"><i class="fas fa-database"></i> MySQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Tools & Platforms</h4>
+        <div class="skills-grid">
+          <div class="skill-bubble"><i class="fas fa-tools"></i> Git</div>
+          <div class="skill-bubble"><i class="fas fa-tools"></i> Docker</div>
+          <div class="skill-bubble"><i class="fas fa-tools"></i> Jupyter</div>
+          <div class="skill-bubble"><i class="fas fa-tools"></i> VS Code</div>
+          <div class="skill-bubble"><i class="fas fa-tools"></i> Tableau</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Other Skills</h4>
+        <div class="skills-grid">
+          <div class="skill-bubble"><i class="fas fa-brain"></i> Data Structures & Algorithms</div>
+          <div class="skill-bubble"><i class="fas fa-brain"></i> Web Development</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-subsection" data-aos="fade-left">
+      <h3>Soft Skills</h3>
+      <div class="skills-grid soft-skills">
+        <div class="skill-bubble"><i class="fas fa-comments"></i> Communication</div>
+        <div class="skill-bubble"><i class="fas fa-users"></i> Team Collaboration</div>
+        <div class="skill-bubble"><i class="fas fa-lightbulb"></i> Problem-Solving</div>
+        <div class="skill-bubble"><i class="fas fa-user-tie"></i> Leadership</div>
+        <div class="skill-bubble"><i class="fas fa-tasks"></i> Multitasking</div>
+        <div class="skill-bubble"><i class="fas fa-headphones-alt"></i> Active Listening</div>
+        <div class="skill-bubble"><i class="fas fa-network-wired"></i> Networking</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-gallery">
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Real-Time Object Detection</h3>
+        <p>YOLOv8 + Visual Genome</p>
+        <a href="https://github.com/hasshya1530/real_time_object_detection_using_yolon" target="_blank">View</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>British Airways Review</h3>
+        <p>Tableau Dashboard</p>
+        <a href="https://github.com/hasshya1530/Data_Analytics--British-Airways-Review" target="_blank">View</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Amazon Clone</h3>
+        <p>HTML, CSS, JavaScript</p>
+        <a href="https://hasshya1530.github.io/Amazon-Clone/" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Personal Portfolio</h3>
+        <p>HTML, CSS, JavaScript</p>
+        <a href="https://hasshya1530.github.io/" target="_blank">View</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Plant Disease Detection</h3>
+        <p>CNN, TensorFlow</p>
+        <a href="https://github.com/hasshya1530/automated_plant_disease_detection_using_ml" target="_blank">GitHub</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Personality Prediction</h3>
+        <p>Random Forest, KNN</p>
+        <a href="https://github.com/hasshya1530/human_personality_prediction_using_ml" target="_blank">GitHub</a>
+      </div>
+
+      <div class="glass-card project-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3>Text ↔ Speech Converter</h3>
+        <p>Python, pyttsx3, SpeechRecognition</p>
+        <a href="https://github.com/hasshya1530/Text-to-Speech-viceversa" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <div class="certifications-list">
+      <div class="glass-card cert-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h4>Google Data Analytics Professional Certificate</h4>
+        <p>Coursera</p>
+        <a href="https://coursera.org/share/4e8530436a1bade7f3ab015e1c436528" target="_blank" rel="noopener noreferrer">View Certificate</a>
+      </div>
+
+      <div class="glass-card cert-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h4>Deep Learning and Neural Networks</h4>
+        <p>IBM</p>
+        <a href="https://coursera.org/share/82bc1b8d60fed66e13ec6e5e7762eb23" target="_blank" rel="noopener noreferrer">View Certificate</a>
+      </div>
+
+      <div class="glass-card cert-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h4>Machine Learning for All</h4>
+        <p>University of London</p>
+        <a href="https://coursera.org/share/d6b1757336749bf96f0cfc6a3c36fa1b" target="_blank" rel="noopener noreferrer">View Certificate</a>
+      </div>
+
+      <div class="glass-card cert-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h4>Artificial Intelligence A-Z</h4>
+        <p>Udemy</p>
+        <a href="https://www.udemy.com/course/artificial-intelligence-az/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+      </div>
+
+      <div class="glass-card cert-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h4>Applied Machine Learning in Python</h4>
+        <p>University of Michigan</p>
+        <a href="https://coursera.org/share/00f6bd4ab09a78ec7d7ea5d2bf2ffecf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:hasshyamoorthy1530@gmail.com">hasshyamoorthy1530@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hasshya-krishnamoorthy-289bb2255" target="_blank" rel="noopener noreferrer">Connect</a></p>
+    <p>GitHub: <a href="https://github.com/hasshya1530" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hasshya Krishnamoorthy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
